@@ -5,7 +5,7 @@ class Config(object):
     # pyro client config
     API_ID    = os.environ.get("API_ID", "21857983")
     API_HASH  = os.environ.get("API_HASH", "e469e84c943ce3b8b056eb6a296f2c67")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "7767018611:AAFJ07FhcTmlUVdqAWG5EOLX03cSVLbOb1w") 
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "7508789523:AAF7KkVdl_0ZT3EE7ruZycsvTtFcQ-YIxvo") 
 
     # database config
     DB_NAME = os.environ.get("DB_NAME","AshutoshGoswami24")     
@@ -30,17 +30,14 @@ class Txt(object):
         
     START_TXT = """<blockquote expandable>Hello {} 
     
-➻ This Is An Advanced And Yet Powerful Rename Bot.
+㊅ This Is An Advanced And Yet Powerful Rename Bot.
     
-➻ Using This Bot You Can Auto Rename Of Your Files.
+㊅ Using This Bot You Can Auto Rename Of Your Files.
     
-➻ This Bot Also Supports Custom Thumbnail And Custom Caption.
-    
-➻ Use /tutorial Command To Know How To Use Me.
+㊅ This Bot Also Supports Custom Thumbnail And Custom Caption.
     
 <b>Bot Is Made By @ContactM_ebot</b></blockquote>"""
-
-    
+   
     FILE_NAME_TXT = """<blockquote expandable><b><u>SETUP AUTO RENAME FORMAT</u></b>
 
 Use These Keywords To Setup Custom File Name
