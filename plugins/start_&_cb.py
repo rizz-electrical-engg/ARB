@@ -20,16 +20,16 @@ async def start(client, message):
     button = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("📢 Updates", url="https://t.me/AshutoshGoswami24"),
-                InlineKeyboardButton("💬 Support", url="https://t.me/AshuSupport"),
+                InlineKeyboardButton("📢 Updates", url="https://t.me/aboutRizzx"),
+                InlineKeyboardButton("Cloud🌨️Shop", url="https://t.me/vpsrdpdomainshop"),
             ],
             [
                 InlineKeyboardButton("⚙️ Help", callback_data="help"),
-                InlineKeyboardButton("💙 About", callback_data="about"),
+                InlineKeyboardButton("💀 About", callback_data="about"),
             ],
             [
                 InlineKeyboardButton(
-                    "🧑‍💻 Developer 🧑‍💻", url="https://t.me/AshutoshGoswami24"
+                    "💀Developer💀", url="https://t.me/Noctophile"
                 )
             ],
         ]
@@ -60,18 +60,18 @@ async def cb_handler(client, query: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("📢 Updates", url="https://t.me/AshutoshGoswami24"),
+                        InlineKeyboardButton("📢 Updates", url="https://t.me/aboutRizzx"),
                         InlineKeyboardButton(
-                            "💬 Support", url="https://t.me/AshuSupport"
+                            "Cloud🌨️Shop", url="https://t.me/vpsrdpdomainshop"
                         ),
                     ],
                     [
                         InlineKeyboardButton("⚙️ Help", callback_data="help"),
-                        InlineKeyboardButton("💙 About", callback_data="about"),
+                        InlineKeyboardButton("💀About", callback_data="about"),
                     ],
                     [
                         InlineKeyboardButton(
-                            "🧑‍💻 Developer 🧑‍💻", url="https://t.me/AshutoshGoswami24"
+                            "Me", url="https://t.me/Noctophile"
                         )
                     ],
                 ]
