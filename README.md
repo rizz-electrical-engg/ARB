@@ -1,5 +1,13 @@
 ## Auto Rename Bot With Metadata Rename
 
+<img src="https://envs.sh/nxK.jpg" alt="logo" target="/blank">
+
+<h1 align="center">
+ <b><a href="https://t.me/autorenamexbot" target="/blank"> Auto Rename Bot </a></>
+</h1>
+
+<p align="center"> Thanks for Being Here </p>
+
 
 ##  Configurations
 
@@ -14,23 +22,16 @@
 - `START_PIC` - Start message photo. **Optional**.
 - `WEBHOOK` - Set to `True` if your server requires web services, otherwise set to `False`. **Optional**.
 
-## Deploy to Koyeb
 
-<a target="_blank" href="https://app.koyeb.com/deploy?type=git&repository=github.com/AshutoshGoswami24/Auto-Rename-Bot&branch=main&name=ashu-rename-bot">
-  <img src="https://www.koyeb.com/static/images/deploy/button.svg" alt="Deploy to Koyeb" style="width:170px;">
-</a>
+### DEPLOYEMENT SUPPORT
+<b>FOR VPS</b>
+```
+    git clone repolink
+    cd your repo name
+    pip3 install -r requirements.txt
+    python3 bot.py
+```
 
-## Deploy to Heroku
-
-<a href="https://heroku.com/deploy?template=https://github.com/AshutoshGoswami24/Auto-Rename-Bot">
-  <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy to Heroku" style="width:170px;">
-</a>
-
-## Deploy to Cloud Shell Editor
-
-<a target="_blank" href="https://shell.cloud.google.com/cloudshell/open?cloudshell_git_repo=https://github.com/AshutoshGoswami24/Auto-Rename-Bot&tutorial=Ashu/g-cloud.md">
-  <img src="https://raw.githubusercontent.com/AshutoshGoswami24/text-leech-bot/main/.github/img/x.svg" alt="Deploy to Cloud Shell Editor" style="width:170px;">
-</a>
 
 ## 🥰 Features
 
@@ -65,20 +66,4 @@ broadcast - Message Broadcast command [FOR ADMINS USE ONLY].
 status - Check bot status [FOR ADMINS USE ONLY].
 ```
 
-## Connect with Me
-
-<p align="center">
-<a href="https://t.me/AshutoshGoswami24">
-  <img src="https://img.shields.io/badge/-Asʜᴜᴛᴏsʜ Gᴏsᴡᴀᴍɪ 𝟸𝟺 🇮🇳™-0077B5?style=flat&logo=Telegram&logoColor=white"/>
-</a>
-<a href="https://t.me/AshuSupport">
-  <img src="https://img.shields.io/badge/-Ashu Support-0077B5?style=flat&logo=Telegram&logoColor=white"/>
-</a>
-</p>
-
----
-
-Credits: 🎖️ [𝗔𝘀𝗵𝘂𝘁𝗼𝘀𝗵𝗚𝗼𝘀𝘄𝗮𝗺𝗶𝟮𝟰](https://github.com/AshutoshGoswami24) 🤖
-
-_Last Edited on: 08/21/2024, 10:12:42 AM_
 
