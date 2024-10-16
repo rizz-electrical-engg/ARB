@@ -37,66 +37,61 @@ class Txt(object):
 ➻ This Bot Also Supports Custom Thumbnail And Custom Caption.
     
 ➻ Use /tutorial Command To Know How To Use Me.
-
-<b>Bot Is Made By @AshutoshGoswami24</b>
-
-<b><a href='https://github.com/AshutoshGoswami24/Auto-Rename-Bot'>AshutoshGoswami24/Auto-Rename-Bot.git</a></b></blockquote>
-"""
     
-    FILE_NAME_TXT = """<b><u>SETUP AUTO RENAME FORMAT</u></b>
+<b>Bot Is Made By @ContactM_ebot</b></blockquote>"""
+
+    
+    FILE_NAME_TXT = """<blockquote expandable><b><u>SETUP AUTO RENAME FORMAT</u></b>
 
 Use These Keywords To Setup Custom File Name
 
-✓ `[episode]` :- To Replace Episode Number
-✓ `[quality]` :- To Replace Video Resolution
+✓ episode :- To Replace Episode Number
+✓ quality :- To Replace Video Resolution
 
-<b>➻ Example :</b> <code> /autorename Naruto Shippuden S01[episode] [quality][Dual Audio] @AshutoshGoswami24</code>
+<b>➻ Example :</b> <code> /autorename Naruto Shippuden S02 - EPepisode - quality  [Dual Audio] - @aboutRizzx </code>
 
-<b>➻ Your Current Auto Rename Format :</b> <code>{format_template}</code> """
+<b>➻ Your Current Auto Rename Format :</b> <code>{format_template}</code></blockquote> """
     
-    ABOUT_TXT = f"""<b>🤖 My Name :</b>
-<b>📝 Language :</b> <a href='https://python.org'>Python 3</a>
-<b>📚 Library :</b> <a href='https://pyrogram.org'>Pyrogram 2.0</a>
-<b>🚀 Server :</b> <a href='https://heroku.com'>Heroku</a>
-<b>🧑‍💻 Developer :</b> <a href='https://t.me/AshutoshGoswami24'>PandaWep</a>
-    
-<b>♻️ Bot Made By :</b> @AshutoshGoswami24"""
+    ABOUT_TXT = f"""<blockquote><b>
+┏━━━━━━━━━━━━━
+┣ 🔮 Creator        <a href='https://t.me/Noctophile'>𝙈𝙚</a>
+┣ 🍄 Main Channel   <a href='https://t.me/aboutRizzx'>UPDATES </a>
+┣ 🗿 Cloud Shop     <a href='https://t.me/vpsrdpdomainshop'>𝙑𝙋𝙎 | 𝗥𝗗𝗣 | 𝗗𝗼𝗺𝗮𝗶𝗻𝘀 ☁️</a>
+┗━━━━━━━━━━━━━
+</b></blockquote>"""
 
     
-    THUMBNAIL_TXT = """<b><u>🖼️  HOW TO SET THUMBNAIL</u></b>
+    THUMBNAIL_TXT = """<blockquote expandable><b><u>🖼️  HOW TO SET THUMBNAIL</u></b>
     
 ⦿ You Can Add Custom Thumbnail Simply By Sending A Photo To Me....
     
 ⦿ /viewthumb - Use This Command To See Your Thumbnail
-⦿ /delthumb - Use This Command To Delete Your Thumbnail"""
+⦿ /delthumb - Use This Command To Delete Your Thumbnail</blockquote>"""
 
-    CAPTION_TXT = """<b><u>📝  HOW TO SET CAPTION</u></b>
+    CAPTION_TXT = """<blockquote expandable><b><u>📝  HOW TO SET CAPTION</u></b>
     
 ⦿ /set_caption - Use This Command To Set Your Caption
 ⦿ /see_caption - Use This Command To See Your Caption
-⦿ /del_caption - Use This Command To Delete Your Caption"""
+⦿ /del_caption - Use This Command To Delete Your Caption</blockquote>"""
 
-    PROGRESS_BAR = """<b>\n
-╭━━━━❰ᴘʀᴏɢʀᴇss ʙᴀʀ❱━➣
-┣⪼ 🗃️ Sɪᴢᴇ: {1} | {2}
-┣⪼ ⏳️ Dᴏɴᴇ : {0}%
-┣⪼ 🚀 Sᴩᴇᴇᴅ: {3}/s
-┣⪼ ⏰️ Eᴛᴀ: {4}
-┣⪼ 🥺 joine Plz: @AshutoshGoswami24
-╰━━━━━━━━━━━━━━━➣ </b>"""
+    PROGRESS_BAR = """<blockquote>\n
+<b>📁 Size</b> : {1} | {2}
+<b>⏳️ Done</b> : {0}%
+<b>🚀 Speed</b> : {3}/s
+<b>⏰️ ETA</b> : {4} </blockquote>"""
     
     
-    DONATE_TXT = """<b>🥲 Thanks For Showing Interest In Donation! ❤️</b>
+    DONATE_TXT = """<blockquote><b>🥲 Thanks For Showing Interest In Donation! ❤️</b>
     
 If You Like My Bots & Projects, You Can 🎁 Donate Me Any Amount From 10 Rs Upto Your Choice.
     
-<b>My UPI - PandaWep@ybl</b> """
+<b>🛍 UPI ID:</b> <code>mehere@sbi</code></blockquote> """
     
-    HELP_TXT = """<b>Hey</b> {}
+    HELP_TXT = """<blockquote expandable><b>Hey</b> {}
     
-Joine @AshutoshGoswami24 To Help """
-
-    SEND_METADATA = """<b>📝  METADATA</b>
+Here Is The Help For My Commands.</blockquote>"""
+    
+    SEND_METADATA = """<blockquote expandable><b>📝  METADATA</b>
     
 <b>➻ File Name :</b> <code>{filename}</code>
 <b>➻ File Size :</b> <code>{filesize}</code>
@@ -141,7 +136,7 @@ Joine @AshutoshGoswami24 To Help """
 <b>➻ File System Used :</b> <code>{file_system_used}</code>
 <b>➻ File System Free :</b> <code>{file_system_free}</code>
 <b>➻ File System Percentage :</b> <code>{file_system_percentage}</code>
-<b>➻ File System Mount Point :</b> <code>{file_system_mount_point}</code>
+<b>➻ File System Mount Point :</b> <code>{file_system_mount_point}</code></blockquote>"""
 
 
 
