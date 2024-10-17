@@ -45,7 +45,7 @@ Use These Keywords To Setup Custom File Name
 ✓ episode :- To Replace Episode Number
 ✓ quality :- To Replace Video Resolution
 
-<b>➻ Example :</b> <code> /autorename Naruto Shippuden S02 - EPepisode - quality  [Dual Audio] - @aboutRizzx </code>
+<b>㊅ Example :</b> <code> /autorename  Naruto Shippuden S01[episode] [quality][Dual Audio] @aboutRizzx </code>
 
 <b>➻ Your Current Auto Rename Format :</b> <code>{format_template}</code></blockquote> """
     
