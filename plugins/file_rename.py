@@ -273,6 +273,9 @@ async def auto_rename_files(client, message):
             img = Image.open(ph_path).convert("RGB")
             img = img.resize((320, 320))
             img.save(ph_path, "JPEG")
+        if len(renamed_file_name) > 4096 or len(caption) > 4096:  
+   await download_msg.edit("Error: File name or caption exceeds the 4096 character limit.")  
+   return
 
         try:
             if media_type == "document":

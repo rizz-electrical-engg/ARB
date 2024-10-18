@@ -26,7 +26,7 @@ async def restart_bot(b, m):
     global is_restarting
     if not is_restarting:
         is_restarting = True
-        await m.reply_text("**🔄 Restarting.....**")
+        await m.reply_text("**🌋 Restarting.....**")
 
         # Gracefully stop the bot's event loop
         b.stop()
@@ -47,7 +47,7 @@ async def tutorial(bot, message):
             ),
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton("⚡ Tutorial", url="https://t.me/AshuSupport")]]
+                [[InlineKeyboardButton("⚡ Contact", url="https://t.me/ContactM_ebot")]]
             ),
         )
     except Exception as e:
