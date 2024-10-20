@@ -18,7 +18,7 @@ class Config(object):
     ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '833465134').split()]
     # -- FORCE_SUB_CHANNELS = ["BotzPW","AshuSupport","AshutoshGoswami24"] -- # 
     FORCE_SUB_CHANNELS = os.environ.get('FORCE_SUB_CHANNELS', 'aboutRizzx').split(',')
-  DUMP_CHANNEL = os.environ.get("DUMP_CHANNEL", "-100123456789")  # Replace with your dump channel ID
+    DUMP_CHANNEL = os.environ.get("DUMP_CHANNEL", "-100123456789")  # Replace with your dump channel ID
     LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002497860595"))
     PORT = int(os.environ.get("PORT", "67"))
     
