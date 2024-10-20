@@ -5,7 +5,7 @@ class Config(object):
     # pyro client config
     API_ID    = os.environ.get("API_ID", "21857983")
     API_HASH  = os.environ.get("API_HASH", "e469e84c943ce3b8b056eb6a296f2c67")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "7508789523:AAF7KkVdl_0ZT3EE7ruZycsvTtFcQ-YIxvo") 
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "7767018611:AAFJ07FhcTmlUVdqAWG5EOLX03cSVLbOb1w") 
 
     # database config
     DB_NAME = os.environ.get("DB_NAME","AshutoshGoswami24")     
@@ -18,6 +18,7 @@ class Config(object):
     ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '833465134').split()]
     # -- FORCE_SUB_CHANNELS = ["BotzPW","AshuSupport","AshutoshGoswami24"] -- # 
     FORCE_SUB_CHANNELS = os.environ.get('FORCE_SUB_CHANNELS', 'aboutRizzx').split(',')
+    FILES_CHANNEL = int(os.environ.get("FILES_CHANNEL", "-1002361907371")
     LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002497860595"))
     PORT = int(os.environ.get("PORT", "60"))
     
