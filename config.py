@@ -18,7 +18,7 @@ class Config(object):
     ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '833465134').split()]
     # -- FORCE_SUB_CHANNELS = ["BotzPW","AshuSupport","AshutoshGoswami24"] -- # 
     FORCE_SUB_CHANNELS = os.environ.get('FORCE_SUB_CHANNELS', 'aboutRizzx').split(',')
-    FILES_CHANNEL = int(os.environ.get("FILES_CHANNEL", "-1002361907371")
+    FILES_CHANNEL = int(os.environ.get("FILES_CHANNEL", "-1002361907371"))
     LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002497860595"))
     PORT = int(os.environ.get("PORT", "60"))
     
