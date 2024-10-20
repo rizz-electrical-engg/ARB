@@ -20,7 +20,7 @@ class Config(object):
     FORCE_SUB_CHANNELS = os.environ.get('FORCE_SUB_CHANNELS', 'aboutRizzx').split(',')
     FILES_CHANNEL = int(os.environ.get("FILES_CHANNEL", "-1002361907371"))
     LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002497860595"))
-    PORT = int(os.environ.get("PORT", "60"))
+    PORT = int(os.environ.get("PORT", "67"))
     
     # wes response configuration     
     WEBHOOK = bool(os.environ.get("WEBHOOK", "True"))
