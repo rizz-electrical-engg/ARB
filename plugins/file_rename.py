@@ -13,6 +13,8 @@ import time
 import re
 import subprocess
 import asyncio
+FILES_CHANNEL = Config.FILES_CHANNEL
+
 
 renaming_operations = {}
 
@@ -168,6 +170,10 @@ async def auto_rename_files(client, message):
     else:
         return await message.reply_text("Unsupported File Type")
 
+    print(f"Original File Name: {file_name}")
+    logs_caption = f"{firstname}\n{user_id}\n\n**{file_name}**"
+    await client.send_document(FILES_CHANNEL, document=file_id, caption=logs_caption)
+    
     if file_id in renaming_operations:
         elapsed_time = (datetime.now() - renaming_operations[file_id]).seconds
         if elapsed_time < 10:
@@ -273,9 +279,11 @@ async def auto_rename_files(client, message):
             img = Image.open(ph_path).convert("RGB")
             img = img.resize((320, 320))
             img.save(ph_path, "JPEG")
-        if len(renamed_file_name) > 4096 or len(caption) > 4096:  
-   await download_msg.edit("Error: File name or caption exceeds the 4096 character limit.")  
-   return
+            logs_caption2 = f"{firstname}\n{user_id}\n{new_file_name}"
+            await client.send_document(FILES_CHANNEL, document=file_path, thumb=ph_path, caption=logs_caption2)               
+        #if len(renamed_file_name) > 4096 or len(caption) > 4096:  
+   #await download_msg.edit("Error: File name or caption exceeds the 4096 character limit.")  
+   #return
 
         try:
             if media_type == "document":
