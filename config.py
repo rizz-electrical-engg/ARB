@@ -5,7 +5,7 @@ class Config(object):
     # pyro client config
     API_ID    = os.environ.get("API_ID", "21857983")
     API_HASH  = os.environ.get("API_HASH", "e469e84c943ce3b8b056eb6a296f2c67")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "7767018611:AAFJ07FhcTmlUVdqAWG5EOLX03cSVLbOb1w") 
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "7508789523:AAF7KkVdl_0ZT3EE7ruZycsvTtFcQ-YIxvo") 
 
     # database config
     DB_NAME = os.environ.get("DB_NAME","AshutoshGoswami24")     
@@ -19,7 +19,7 @@ class Config(object):
     # -- FORCE_SUB_CHANNELS = ["BotzPW","AshuSupport","AshutoshGoswami24"] -- # 
     FORCE_SUB_CHANNELS = os.environ.get('FORCE_SUB_CHANNELS', 'aboutRizzx').split(',')
     LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002497860595"))
-    PORT = int(os.environ.get("PORT", "66"))
+    PORT = int(os.environ.get("PORT", "60"))
     
     # wes response configuration     
     WEBHOOK = bool(os.environ.get("WEBHOOK", "True"))
@@ -45,7 +45,7 @@ Use These Keywords To Setup Custom File Name
 ✓ episode :- To Replace Episode Number
 ✓ quality :- To Replace Video Resolution
 
-<b>㊅ Example :</b> <code> /autorename  Naruto Shippuden S01[episode] [quality][Dual Audio] @aboutRizzx </code>
+<b>➻ Example :</b> <code> /autorename Naruto Shippuden S02 - EPepisode - quality  [Dual Audio] - @aboutRizzx </code>
 
 <b>➻ Your Current Auto Rename Format :</b> <code>{format_template}</code></blockquote> """
     
