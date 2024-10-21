@@ -19,7 +19,7 @@ class Config(object):
     # -- FORCE_SUB_CHANNELS = ["BotzPW","AshuSupport","AshutoshGoswami24"] -- # 
     FORCE_SUB_CHANNELS = os.environ.get('FORCE_SUB_CHANNELS', 'aboutRizzx').split(',')
     LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002497860595"))
-    PORT = int(os.environ.get("PORT", "60"))
+    PORT = int(os.environ.get("PORT", "66"))
     
     # wes response configuration     
     WEBHOOK = bool(os.environ.get("WEBHOOK", "True"))
