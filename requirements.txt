@@ -8,3 +8,4 @@ aiohttp
 pytz
 humanize
 ffmpeg-python
+pyromod
