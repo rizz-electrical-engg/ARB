@@ -22,7 +22,7 @@ class Database:
             file_id=None,
             caption=None,
             metadata=True,
-            metadata_code="Telegram : @AshutoshGoswami24",
+            metadata_code="Telegram : @ContactM_ebot",
             format_template=None,
         )
 
