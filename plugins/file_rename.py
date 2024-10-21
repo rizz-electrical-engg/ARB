@@ -251,6 +251,7 @@ async def auto_rename_files(client, message):
         # Upload the file
         upload_msg = await download_msg.edit("Uploading the file...")
         ph_path = None
+        caption = f"Renamed to {renamed_file_name}"
         await bot_instance.dump_file(path, caption)
 
     except Exception as e:
