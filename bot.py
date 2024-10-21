@@ -68,6 +68,17 @@ class Bot(Client):
         await super().stop()
         logging.info("Bot Stopped 🙄")
 
+    async def dump_file(self, file_path, caption=None):
+        try:
+            await self.send_document(
+                Config.DUMP_CHANNEL,
+                document=file_path,
+                caption=caption
+            )
+            logging.info(f"File {file_path} dumped to channel {Config.DUMP_CHANNEL}")
+        except Exception as e:
+            logging.error(f"Failed to dump file {file_path}: {e}")
+
 
 bot_instance = Bot()
 

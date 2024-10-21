@@ -1,5 +1,4 @@
 pyromod==3.1.6  # or the latest version compatible with your code
-asyncio 
 TgCrypto
 motor
 dnspython

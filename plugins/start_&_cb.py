@@ -29,7 +29,7 @@ async def start(client, message):
             ],
             [
                 InlineKeyboardButton(
-                    "💀Developer💀", url="https://t.me/Noctophile"
+                    "Developer", url="https://t.me/Noctophile"
                 )
             ],
         ]

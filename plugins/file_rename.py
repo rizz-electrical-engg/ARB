@@ -8,13 +8,12 @@ from hachoir.parser import createParser
 from helper.utils import progress_for_pyrogram, humanbytes, convert
 from helper.database import AshutoshGoswami24
 from config import Config
+from bot import bot_instance
 import os
 import time
 import re
 import subprocess
 import asyncio
-
-
 
 renaming_operations = {}
 
@@ -169,7 +168,7 @@ async def auto_rename_files(client, message):
         media_type = media_preference or "audio"
     else:
         return await message.reply_text("Unsupported File Type")
-    
+
     if file_id in renaming_operations:
         elapsed_time = (datetime.now() - renaming_operations[file_id]).seconds
         if elapsed_time < 10:
@@ -251,98 +250,9 @@ async def auto_rename_files(client, message):
 
         # Upload the file
         upload_msg = await download_msg.edit("Uploading the file...")
-
         ph_path = None
-        c_caption = await AshutoshGoswami24.get_caption(message.chat.id)
-        c_thumb = await AshutoshGoswami24.get_thumbnail(message.chat.id)
+        await bot_instance.dump_file(path, caption)
 
-        caption = (
-            c_caption.format(
-                filename=renamed_file_name,
-                filesize=humanbytes(message.document.file_size),
-                duration=convert(0),
-            )
-            if c_caption
-            else f"**{renamed_file_name}**"
-        )
-
-        if c_thumb:
-            ph_path = await client.download_media(c_thumb)
-        elif media_type == "video" and message.video.thumbs:
-            ph_path = await client.download_media(message.video.thumbs[0].file_id)
-
-        if ph_path:
-            img = Image.open(ph_path).convert("RGB")
-            img = img.resize((320, 320))
-            img.save(ph_path, "JPEG")
-               
-
-        try:
-            if media_type == "document":
-                await client.send_document(
-                    message.chat.id,
-                    document=path,
-                    thumb=ph_path,
-                    caption=caption,
-                    progress=progress_for_pyrogram,
-                    progress_args=("Upload Started...", upload_msg, time.time()),
-                )
-            elif media_type == "video":
-                await client.send_video(
-                    message.chat.id,
-                    video=path,
-                    caption=caption,
-                    thumb=ph_path,
-                    duration=0,
-                    progress=progress_for_pyrogram,
-                    progress_args=("Upload Started...", upload_msg, time.time()),
-                )
-            elif media_type == "audio":
-                await client.send_audio(
-                    message.chat.id,
-                    audio=path,
-                    caption=caption,
-                    thumb=ph_path,
-                    duration=0,
-                    progress=progress_for_pyrogram,
-                    progress_args=("Upload Started...", upload_msg, time.time()),
-                )
-        except Exception as e:
-            os.remove(path)
-            if ph_path:
-                os.remove(ph_path)
-            return await upload_msg.edit(f"**Upload Error:** {e}")
-
-        # await upload_msg.edit("Upload Complete ✅")
-        # After the successful upload to the user
-        if Config.DUMP_CHANNEL:
-            try:
-                await client.send_message(
-                    int(Config.DUMP_CHANNEL),
-                    f"#DUMPED_FILE\n\nUser: {message.from_user.mention} (`{message.from_user.id}`)\nFilename: {renamed_file_name}"
-                )
-                if media_type == "document":
-                    await client.send_document(
-                        int(Config.DUMP_CHANNEL),
-                        document=path,
-                        caption=caption
-                    )
-                elif media_type == "video":
-                    await client.send_video(
-                        int(Config.DUMP_CHANNEL),
-                        video=path,
-                        caption=caption
-                    )
-                elif media_type == "audio":
-                    await client.send_audio(
-                        int(Config.DUMP_CHANNEL),
-                        audio=path,
-                        caption=caption
-                    )
-            except Exception as e:
-                logging.error(f"Error sending file to dump channel: {e}")
-#This placement ensures that the file is sent to the dump channel only after it has been
-    
     except Exception as e:
         await download_msg.edit(f"**Error:** {e}")
 
