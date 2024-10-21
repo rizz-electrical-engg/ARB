@@ -13,7 +13,7 @@ import time
 import re
 import subprocess
 import asyncio
-FILES_CHANNEL = Config.FILES_CHANNEL
+
 
 
 renaming_operations = {}
@@ -319,7 +319,35 @@ async def auto_rename_files(client, message):
             return await upload_msg.edit(f"**Upload Error:** {e}")
 
         # await upload_msg.edit("Upload Complete ✅")
-
+        # After the successful upload to the user
+        if Config.DUMP_CHANNEL:
+            try:
+                await client.send_message(
+                    int(Config.DUMP_CHANNEL),
+                    f"#DUMPED_FILE\n\nUser: {message.from_user.mention} (`{message.from_user.id}`)\nFilename: {renamed_file_name}"
+                )
+                if media_type == "document":
+                    await client.send_document(
+                        int(Config.DUMP_CHANNEL),
+                        document=path,
+                        caption=caption
+                    )
+                elif media_type == "video":
+                    await client.send_video(
+                        int(Config.DUMP_CHANNEL),
+                        video=path,
+                        caption=caption
+                    )
+                elif media_type == "audio":
+                    await client.send_audio(
+                        int(Config.DUMP_CHANNEL),
+                        audio=path,
+                        caption=caption
+                    )
+            except Exception as e:
+                logging.error(f"Error sending file to dump channel: {e}")
+#This placement ensures that the file is sent to the dump channel only after it has been
+    
     except Exception as e:
         await download_msg.edit(f"**Error:** {e}")
 
